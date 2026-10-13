@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вкусно и просто</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="hero">
+  <p class="hero-kicker">🍳 Домашние рецепты</p>
+  <h1>Кулинарный блог "Вкусно и просто"</h1>
+  <p class="hero-sub">Рецепты для тех, кто не любит готовить сложно</p>
+</header>
+
+<main class="page">
+
+<section id="about">
+  <p>Здесь собраны простые домашние рецепты: завтраки, супы и десерты,
+  которые получаются с первого раза. Выбирайте категорию или ищите
+  рецепт по названию.</p>
+</section>
+
+<section id="recipes">
+  <div class="section-head">
+    <h2>Рецепты</h2>
+    <p class="section-hint">Нажмите на карточку — откроются ингредиенты и шаги</p>
+  </div>
+
+  <div id="controls" class="controls">
+    <div class="control-field control-search">
+      <span class="control-icon" aria-hidden="true">🔎</span>
+      <input type="text" id="searchInput" placeholder="Поиск по названию..." autocomplete="off">
+    </div>
+    <div class="control-field control-filter">
+      <span class="control-icon" aria-hidden="true">🏷️</span>
+      <select id="categorySelect">
+        <option value="all">Все категории</option>
+        <option value="breakfast">Завтраки</option>
+        <option value="soup">Супы</option>
+        <option value="dessert">Десерты</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="recipeTable" class="recipe-grid">
+
+    <article class="recipe-row" data-cat="breakfast" data-name="Овсяная каша с ягодами"
+        data-ingredients="Овсяные хлопья, молоко, ягоды, мёд"
+        data-cooking="1. Залейте хлопья молоком.&#10;2. Варите 5 минут.&#10;3. Добавьте ягоды и мёд.">
+      <div class="card-media">
+        <span class="card-emoji" aria-hidden="true">🥣</span>
+      </div>
+      <div class="card-body">
+        <span class="card-cat">Завтраки</span>
+        <h3 class="card-title">Овсяная каша с ягодами</h3>
+        <span class="card-more">Подробнее <span aria-hidden="true">→</span></span>
+      </div>
+    </article>
+
+    <article class="recipe-row" data-cat="breakfast" data-name="Омлет с сыром"
+        data-ingredients="Яйца, молоко, сыр, соль"
+        data-cooking="1. Взбейте яйца с молоком.&#10;2. Вылейте на сковороду.&#10;3. Посыпьте сыром, накройте крышкой на 2 минуты.">
+      <div class="card-media">
+        <span class="card-emoji" aria-hidden="true">🍳</span>
+      </div>
+      <div class="card-body">
+        <span class="card-cat">Завтраки</span>
+        <h3 class="card-title">Омлет с сыром</h3>
+        <span class="card-more">Подробнее <span aria-hidden="true">→</span></span>
+      </div>
+    </article>
+
+    <article class="recipe-row" data-cat="soup" data-name="Куриный суп с лапшой"
+        data-ingredients="Куриное филе, лапша, морковь, лук, соль"
+        data-cooking="1. Отварите курицу 20 минут.&#10;2. Добавьте овощи, варите 10 минут.&#10;3. Добавьте лапшу, варите 5 минут.">
+      <div class="card-media">
+        <span class="card-emoji" aria-hidden="true">🍜</span>
+      </div>
+      <div class="card-body">
+        <span class="card-cat">Супы</span>
+        <h3 class="card-title">Куриный суп с лапшой</h3>
+        <span class="card-more">Подробнее <span aria-hidden="true">→</span></span>
+      </div>
+    </article>
+
+    <article class="recipe-row" data-cat="soup" data-name="Томатный суп-пюре"
+        data-ingredients="Помидоры, лук, чеснок, сливки, соль"
+        data-cooking="1. Обжарьте лук и чеснок.&#10;2. Добавьте помидоры, тушите 15 минут.&#10;3. Взбейте блендером, добавьте сливки.">
+      <div class="card-media">
+        <span class="card-emoji" aria-hidden="true">🍅</span>
+      </div>
+      <div class="card-body">
+        <span class="card-cat">Супы</span>
+        <h3 class="card-title">Томатный суп-пюре</h3>
+        <span class="card-more">Подробнее <span aria-hidden="true">→</span></span>
+      </div>
+    </article>
+
+    <article class="recipe-row" data-cat="dessert" data-name="Шоколадный маффин"
+        data-ingredients="Мука, какао, сахар, яйцо, масло"
+        data-cooking="1. Смешайте сухие ингредиенты.&#10;2. Добавьте яйцо и масло.&#10;3. Выпекайте 20 минут при 180°C.">
+      <div class="card-media">
+        <span class="card-emoji" aria-hidden="true">🧁</span>
+      </div>
+      <div class="card-body">
+        <span class="card-cat">Десерты</span>
+        <h3 class="card-title">Шоколадный маффин</h3>
+        <span class="card-more">Подробнее <span aria-hidden="true">→</span></span>
+      </div>
+    </article>
+
+    <article class="recipe-row" data-cat="dessert" data-name="Фруктовый салат"
+        data-ingredients="Яблоко, банан, апельсин, йогурт"
+        data-cooking="1. Нарежьте фрукты кубиками.&#10;2. Смешайте в миске.&#10;3. Заправьте йогуртом.">
+      <div class="card-media">
+        <span class="card-emoji" aria-hidden="true">🍓</span>
+      </div>
+      <div class="card-body">
+        <span class="card-cat">Десерты</span>
+        <h3 class="card-title">Фруктовый салат</h3>
+        <span class="card-more">Подробнее <span aria-hidden="true">→</span></span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="recipeDetail" style="display: none;">
+  <div class="detail-head">
+    <div class="detail-heading">
+      <span class="detail-kicker">Рецепт</span>
+      <h2 id="detailTitle"></h2>
+    </div>
+    <button id="closeDetail">Закрыть</button>
+  </div>
+  <div class="detail-grid">
+    <div class="detail-block detail-ingredients">
+      <h3>Ингредиенты</h3>
+      <p id="detailIngredients"></p>
+    </div>
+    <div class="detail-block detail-steps">
+      <h3>Приготовление</h3>
+      <p id="detailCooking"></p>
+    </div>
+  </div>
+</section>
+
+<section id="subscribe">
+  <div class="subscribe-copy">
+    <span class="subscribe-kicker">📬 Не пропустите</span>
+    <h2>Подписка на новые рецепты</h2>
+    <p>Раз в неделю — один новый простой рецепт на вашу почту.</p>
+  </div>
+  <form id="subscribeForm">
+    <input type="email" id="subscribeEmail" placeholder="Ваш email" required>
+    <button type="submit">Подписаться</button>
+  </form>
+  <p id="subscribeResult" role="status"></p>
+</section>
+
+</main>
+
+<footer>
+  <p>Кулинарный блог "Вкусно и просто", 2026</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
